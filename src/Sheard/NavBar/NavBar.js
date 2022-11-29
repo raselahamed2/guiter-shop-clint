@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import guiter from '../../assetes/guiter.png'
 
 const NavBar = () => {
   return (
@@ -24,7 +25,13 @@ const NavBar = () => {
             <li><Link>Item 3</Link></li>
           </ul>
         </div>
-        <Link className="btn btn-ghost normal-case text-xl text-primary">Gitar Stock</Link>
+        <Link to='/' className="text-primary">
+          <div className="avatar">
+            <div className="w-24 rounded-full">
+              <img src={guiter} alt="" />
+            </div>
+          </div>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
