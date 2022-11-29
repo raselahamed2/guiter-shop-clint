@@ -1,13 +1,5 @@
-import React, { useEffect, useState } from 'react';
 
 const Banner = () => {
-    const [guiterItem, setGuiteItem] = useState('')
-
-    useEffect(() => {
-        fetch('guiter.json')
-        .then(res => res.json())
-        .then(data => setGuiteItem(data))
-    }, [])
     return (
         <div className=''>
             <div className="hero min-h-screen" style={{ backgroundImage: `url("https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/electric-guitar-player-playing-hard-rock-music-with-bass-guitar-on-stage-e1648447565407-1024x683.jpg")` }}>

@@ -1,26 +1,56 @@
 [
     {
-        "name": "Teeth Orthodontics",
-        "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/close-up-of-music-guitar-1024x682.jpg"
+        "_id": 1,
+        "price": 2500,
+        "name": "WS45 Jbanez",
+        "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/jbanez-artistic-signature-guitars.jpg"
     },
     {
-        "name": "Cosmetic Dentistry",
-        "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/04/modern-electric-and-retro-acoustic-guitars-closeup-1024x682.jpg"
+        "_id": 2,
+        "price": 800,
+        "name": "White Acoustic",
+        "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/acoustic-guitars-bNKBFtg5vig.jpg"
     },
     {
-        "name": "Teeth Cleaning",
+        "_id": 3,
+        "price": 3000,
+        "name": "RZ Red Zeppelin",
         "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/red-guitars-jbanez-PNUPBFU.jpg"
     },
     {
-        "name": "Cavity Protection",
+        "_id": 4,
+        "price": 2799,
+        "name": "JM1 Jazz Master",
         "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/white-simple-guitars-1-oxMhZ1cQAIg.jpg"
     },
     {
-        "name": "Pediatric Dental",
+        "_id": 5,
+        "price": 3500,
+        "name": "Paul Timmons",
         "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/paul-timmons-guitar-electric-xmksM4em7a0.jpg"
     },
     {
-        "name": "Oral Surgery",
+        "_id": 6,
+        "price": 1000,
+        "name": "ZW Black Jbanez",
         "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/Hendric-signature-CVCH4cdf2wo.jpg"
+    },
+    {
+        "_id": 7,
+        "price": 4000,
+        "name": "RZ Jbanez",
+        "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/henry-signature-guitars-2.jpg"
+    },
+    {
+        "_id": 8,
+        "price": 2500,
+        "name": "AZ Jbanez",
+        "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/Hendric-signature-CVCH4cdf2wo.jpg"
+    },
+    {
+        "_id": 9,
+        "price": 2000,
+        "name": "Freddy Jbanez",
+        "image": "https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/jbanez-artistic-signature-2-j00HgA1cWFU.jpg"
     }
 ]

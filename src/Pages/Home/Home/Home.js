@@ -1,7 +1,7 @@
 import React from 'react';
 import Abouts from '../Banner/About/Abouts';
 import Banner from '../Banner/Banner';
-import GuiterMan from '../GuiterMan/GuiterMan';
+import GuiterMan from '../Banner/GuiterMan/GuiterMan';
 import InfoCard from '../InfoCard/InfoCard';
 
 
