@@ -5,7 +5,7 @@ import NavBar from '../Sheard/NavBar/NavBar';
 
 const Main = () => {
     return (
-        <div data-theme="light" className="max-w-[1440px] mx-auto bg-light">
+        <div className="max-w-[1440px] mx-auto bg-light">
             <NavBar></NavBar>
             <Outlet></Outlet>
             <Footer></Footer>
