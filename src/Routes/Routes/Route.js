@@ -4,6 +4,8 @@ import Home from "../../Pages/Home/Home/Home";
 import Shops from "../../Pages/Shop/Shops";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
+import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
+import PrivateRoute from "../../Pages/SignUp/PrivateRoute";
 
  export const router = createBrowserRouter([
     {
@@ -26,6 +28,13 @@ import SignUp from "../../Pages/SignUp/SignUp";
                 path: '/signup',
                 element: <SignUp></SignUp>
             }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children: [
+
         ]
     }
 ])
