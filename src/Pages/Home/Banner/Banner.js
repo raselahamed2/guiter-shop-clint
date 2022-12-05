@@ -1,8 +1,9 @@
+import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className=''>
-            <div className="hero min-h-screen" style={{ backgroundImage: `url("https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/electric-guitar-player-playing-hard-rock-music-with-bass-guitar-on-stage-e1648447565407-1024x683.jpg")` }}>
+        <div className=' carousel-img'>
+            <div className="hero min-h-screen rounded-lg" style={{ backgroundImage: `url("https://templatekit.jegtheme.com/jbanez/wp-content/uploads/sites/253/2022/03/electrical-guitar-in-repair-service-shop-with-a-hands-of-a-guitar-luthier-800x532.jpg")` }}>
                 <div className="hero-overlay bg-opacity-40"></div>
                 <div className="hero-content text-neutral-content">
                     <div className="">

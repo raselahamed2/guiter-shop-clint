@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
+import { AuthContext } from '../../../Context/AuthProvider';
 
-const BookingModal = ({ buyProduct, setBuyProduct }) => {
-    const {name} = buyProduct
+const BookingModal = ({ buyProduct, setBuyProduct, guiter }) => {
+    const { name } = buyProduct
+    const { user } = useContext(AuthContext)
 
     const handleBooking = event => {
         event.preventDefault()
@@ -9,18 +12,31 @@ const BookingModal = ({ buyProduct, setBuyProduct }) => {
         const name = form.name.value;
         const email = form.email.value;
         const phone = form.phone.value;
-        const last = form.last.value;
+        const productName = form.productname.value;
 
-        console.log(last, name, email, phone);
+        console.log(name, email, phone);
 
         const booking = {
-            booking: name,
-            last,
+            productName,
+            name,
             email,
             phone,
         }
-        console.log(booking);
-        setBuyProduct(null)
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    setBuyProduct(null)
+                    toast.success('Booking Successfull')
+                }
+            })
     }
 
     return (
@@ -31,10 +47,10 @@ const BookingModal = ({ buyProduct, setBuyProduct }) => {
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-lg font-bold mb-6">{name}</h3>
                     <form onSubmit={handleBooking}>
-                    <input name='name' type="text" placeholder="First Name" className="input input-bordered w-full mb-6" />
-                    <input name='last' type="text" placeholder="Last Name" className="input input-bordered w-full mb-6" />
-                        <input name='email' type="email" placeholder="Email" className="input input-bordered w-full mb-6" />
-                        <input name='phone' type="text" placeholder="Phone Number" className="input input-bordered w-full mb-6" />
+                        <input name='productname' type="text" readOnly defaultValue={name} disabled placeholder="productname" className="input input-bordered w-full mb-6" />
+                        <input name='name' type="text" readOnly defaultValue={user?.displayName} disabled placeholder="name" className="input input-bordered w-full mb-6" />
+                        <input name='email' type="email" readOnly disabled defaultValue={user?.email} placeholder="Email" className="input input-bordered w-full mb-6" />
+                        <input name='phone' type="number" placeholder="Phone Number" className="input input-bordered w-full mb-6" />
                         <input className='btn btn-accent w-full' type="submit" value="SUBMIT" />
                     </form>
                 </div>
