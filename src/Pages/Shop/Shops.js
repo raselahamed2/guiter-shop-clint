@@ -10,9 +10,9 @@ const Shops = () => {
     const { data: guiters, isLoading } = useQuery({
         queryKey: ['guiter'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/guiter')
-                const data = await res.json()
-                return data;
+            const res = await fetch('https://guiter-server.vercel.app/guiter')
+            const data = await res.json()
+            return data;
         }
     })
 
@@ -34,7 +34,7 @@ const Shops = () => {
             {
                 buyProduct &&
                 <BookingModal
-                guiter={ guiters }
+                    guiter={guiters}
                     buyProduct={buyProduct}
                     setBuyProduct={setBuyProduct}
                 ></BookingModal>

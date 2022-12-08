@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../Context/AuthProvider';
 
-const BookingModal = ({ buyProduct, setBuyProduct, guiter }) => {
-    const { name } = buyProduct
+const BookingModal = ({ buyProduct, setBuyProduct }) => {
+    const { name, image } = buyProduct
     const { user } = useContext(AuthContext)
 
     const handleBooking = event => {
@@ -14,15 +14,13 @@ const BookingModal = ({ buyProduct, setBuyProduct, guiter }) => {
         const phone = form.phone.value;
         const productName = form.productname.value;
 
-        console.log(name, email, phone);
-
         const booking = {
             productName,
             name,
             email,
             phone,
         }
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://guiter-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -47,6 +45,7 @@ const BookingModal = ({ buyProduct, setBuyProduct, guiter }) => {
                     <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <h3 className="text-lg font-bold mb-6">{name}</h3>
                     <form onSubmit={handleBooking}>
+                        <figure><img className='h-48 w-1/2 mx-auto mb-3' src={image} alt="Shoes" /></figure>
                         <input name='productname' type="text" readOnly defaultValue={name} disabled placeholder="productname" className="input input-bordered w-full mb-6" />
                         <input name='name' type="text" readOnly defaultValue={user?.displayName} disabled placeholder="name" className="input input-bordered w-full mb-6" />
                         <input name='email' type="email" readOnly disabled defaultValue={user?.email} placeholder="Email" className="input input-bordered w-full mb-6" />
